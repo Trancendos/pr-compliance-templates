@@ -1,0 +1,19 @@
+pr_compliances:
+
+  - title: "Meaningful Variable and Function Names"
+    compliance_label: true
+    objective: "Ensure all identifiers clearly express their purpose and avoid ambiguous or misleading names"
+    success_criteria: "Variable names accurately describe their contents (not just 'data', 'result', 'temp'); function names clearly indicate what they do and their side effects; boolean variables use is_/has_/can_ prefixes"
+    failure_criteria: "Generic names like 'process_data()', single letters outside of conventions (i, j for loops), misleading names that don't match actual behavior, or abbreviations that hurt readability"
+
+  - title: "Exception Handling Specificity and Context"
+    compliance_label: false
+    objective: "Ensure exception handling is specific, provides actionable context, and doesn't silently swallow errors"
+    success_criteria: "Catches specific exception types (not bare except:); error messages include context about what was being attempted and relevant variable values; proper logging before re-raising; no empty except blocks"
+    failure_criteria: "Broad except clauses catching Exception or bare except:; generic error messages like 'Error occurred'; catching and ignoring exceptions without logging; missing context about the operation that failed"
+
+  - title: "Docstring Completeness and Accuracy"
+    compliance_label: true
+    objective: "Ensure docstrings accurately describe actual behavior, edge cases, and provide meaningful examples"
+    success_criteria: "Docstrings match actual implementation; includes behavior for edge cases (None, empty collections); examples are realistic and tested; describes 'why' not just 'what'; warns about side effects or non-obvious behaviors"
+    failure_criteria: "Docstrings that just repeat the function name; outdated descriptions that don't match current behavior; missing edge case documentation; examples that wouldn't actually work; missing warnings about mutations or side effects"

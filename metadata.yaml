@@ -1,0 +1,28 @@
+# Standalone repos
+repo_a:
+  pr_compliance_checklist_paths:
+    - "repo_a"
+
+# Group-associated repos
+repo_b:
+  pr_compliance_checklist_paths:
+    - "groups/backend_repos"
+    - "groups/python"
+
+# Multi-group repos
+repo_c:
+  pr_compliance_checklist_paths:
+    - "groups/frontend_repos"
+    - "groups/javascript"
+
+# Monorepo with subprojects
+monorepo-name:
+  pr_compliance_checklist_paths:
+    - "monorepo-name"
+  monorepo_subprojects:
+    service-a:
+      pr_compliance_checklist_paths:
+        - "monorepo-name/service-a"
+    service-b:
+      pr_compliance_checklist_paths:
+        - "monorepo-name/service-b"
