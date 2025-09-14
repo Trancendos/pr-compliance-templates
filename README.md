@@ -2,11 +2,24 @@
 
 A comprehensive repository of PR compliance checklist templates organized by programming languages and technology stacks for enterprise deployment with Qodo Merge.
 
+See the latest and most detailed instructions in the [Qodo Merge documentation](https://qodo-merge-docs.qodo.ai/tools/compliance/).
+
 ## Overview
 
 This repository provides production-ready `pr_compliance_checklist.yaml` templates designed for enterprise customers to implement intelligent code review automation. Each compliance checklist is carefully crafted to focus on high-value reviews that require contextual understanding beyond what automated linting tools can provide.
 
 **Important**: These templates must be reviewed, customized, and approved by enterprise customers before deployment. Customers will need to commit the finalized compliance files to their repositories.
+
+## Enterprise Deployment Checklist
+
+- [ ] **Identify repository mapping** strategy (local vs. hierarchical)
+- [ ] **Select relevant language templates** for your tech stack
+- [ ] **Customize compliance items** for your specific requirements
+- [ ] **Configure metadata.yaml** for hierarchical setup
+- [ ] **Test with sample PRs** to validate compliance detection
+- [ ] **Train development teams** on compliance requirements
+- [ ] **Establish review processes** for compliance violations
+- [ ] **Monitor and iterate** on compliance effectiveness
 
 ## Repository Structure
 
@@ -51,7 +64,6 @@ This repository provides production-ready `pr_compliance_checklist.yaml` templat
 ## Quick Start
 
 ### Deployment
-See the latest and most detailed instructions in the [Qodo Merge documentation](https://qodo-merge-docs.qodo.ai/tools/compliance/).
 
 #### Option 1: Local Repository Setup
 Place `pr_compliance_checklist.yaml` in your repository root or within a `codebase_standards` folder:
@@ -133,17 +145,6 @@ pr_compliances:
 3. **Use Clear Language**: Developers should understand exactly what's expected
 4. **Avoid Style Preferences**: Focus on meaningful requirements, not formatting
 5. **Consider Context**: Leverage what an LLM can understand that automated tools cannot
-
-## Enterprise Deployment Checklist
-
-- [ ] **Identify repository mapping** strategy (local vs. hierarchical)
-- [ ] **Select relevant language templates** for your tech stack
-- [ ] **Customize compliance items** for your specific requirements
-- [ ] **Configure metadata.yaml** for hierarchical setup
-- [ ] **Test with sample PRs** to validate compliance detection
-- [ ] **Train development teams** on compliance requirements
-- [ ] **Establish review processes** for compliance violations
-- [ ] **Monitor and iterate** on compliance effectiveness
 
 ## Support and Customization
 
