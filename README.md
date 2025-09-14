@@ -1,16 +1,16 @@
 # PR Compliance Templates
 
-A comprehensive repository of PR compliance checklist templates organized by programming languages and technology stacks for enterprise deployment with Qodo Merge.
+A comprehensive repository of PR compliance checklist templates organized by programming languages and technology stacks for automated code review systems.
 
 See the latest and most detailed instructions in the [Qodo Merge documentation](https://qodo-merge-docs.qodo.ai/tools/compliance/).
 
 ## Overview
 
-This repository provides production-ready `pr_compliance_checklist.yaml` templates designed for enterprise customers to implement intelligent code review automation. Each compliance checklist is carefully crafted to focus on high-value reviews that require contextual understanding beyond what automated linting tools can provide.
+This repository provides production-ready `pr_compliance_checklist.yaml` templates designed to implement intelligent code review automation. Each compliance checklist is carefully crafted to focus on high-value reviews that require contextual understanding beyond what automated linting tools can provide.
 
-**Important**: These templates must be reviewed, customized, and approved by enterprise customers before deployment. Customers will need to commit the finalized compliance files to their repositories.
+**Important**: These templates should be reviewed, customized, and approved by your organization before deployment. Teams will need to commit the finalized compliance files to their repositories.
 
-## Enterprise Deployment Checklist
+## Deployment Checklist
 
 - [ ] **Identify repository mapping** strategy (local vs. hierarchical)
 - [ ] **Select relevant language templates** for your tech stack
@@ -98,21 +98,21 @@ pr-agent-settings/
 Update `metadata.yaml` to map repositories to compliance paths (this is an example configuration):
 ```yaml
 # Backend Python service
-user-service:
+my-api-service:
   pr_compliance_checklist_paths:
     - "groups/python"
     - "groups/backend_repos"
 
 # Frontend React application
-dashboard-ui:
+my-web-app:
   pr_compliance_checklist_paths:
     - "groups/javascript"
     - "groups/front-end"
 
 # Monorepo with multiple services
-platform-monorepo:
+my-monorepo:
   pr_compliance_checklist_paths:
-    - "platform-monorepo"
+    - "my-monorepo"
   monorepo_subprojects:
     api-service:
       pr_compliance_checklist_paths:
@@ -120,7 +120,7 @@ platform-monorepo:
     web-client:
       pr_compliance_checklist_paths:
         - "groups/typescript"
-        - "groups/front-end"
+        - "groups/frontend_repos"
 ```
 
 ## Customization Guidelines
@@ -148,7 +148,7 @@ pr_compliances:
 
 ## Support and Customization
 
-This repository serves as a starting point for enterprise PR compliance automation. Each organization should:
+This repository serves as a starting point for automated PR compliance. Each organization should:
 
 1. **Evaluate templates** against their specific coding standards
 2. **Add custom compliance items** relevant to their domain
