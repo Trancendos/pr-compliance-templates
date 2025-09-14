@@ -1,0 +1,19 @@
+pr_compliances:
+
+  - title: "Async/Await Patterns and Deadlock Prevention"
+    compliance_label: false
+    objective: "Ensure proper async/await usage and prevent common async deadlocks and issues"
+    success_criteria: "ConfigureAwait(false) used in library code; async methods have Async suffix; Task.Run not used unnecessarily; proper cancellation token usage; no blocking on async code"
+    failure_criteria: "Blocking async calls with .Result or .Wait(), missing ConfigureAwait(false) in libraries, improper Task.Run usage, or potential deadlock scenarios"
+
+  - title: "Exception Handling and Resource Disposal"
+    compliance_label: false
+    objective: "Ensure proper exception handling and resource cleanup using C# idioms"
+    success_criteria: "Using statements or using declarations for IDisposable objects; specific exception types caught; exceptions include meaningful context; proper cleanup in finally blocks or using statements"
+    failure_criteria: "Missing using statements for disposable resources, catching generic Exception without re-throwing, swallowing exceptions without logging, or resource leaks"
+
+  - title: "Nullable Reference Types and Null Safety"
+    compliance_label: true
+    objective: "Ensure proper handling of nullable reference types and null safety practices"
+    success_criteria: "Nullable reference types enabled where appropriate; null checks performed before dereferencing; null-forgiving operator (!) used judiciously with justification; proper use of nullable annotations"
+    failure_criteria: "Missing null checks on nullable references, excessive use of null-forgiving operator without justification, or ignoring nullable reference type warnings"

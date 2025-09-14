@@ -1,0 +1,19 @@
+pr_compliances:
+
+  - title: "Null Safety and Sound Type System"
+    compliance_label: false
+    objective: "Ensure proper use of Dart's null safety features and sound type system"
+    success_criteria: "Null safety enabled and used effectively; nullable types (?) used appropriately; null-aware operators (?., ??, ??=) used instead of explicit null checks; late keyword used judiciously with proper justification"
+    failure_criteria: "Disabling null safety unnecessarily, excessive use of null assertion operator (!), missing null-aware operators, or inappropriate use of late keyword without initialization guarantees"
+
+  - title: "Flutter Development Standards and Widget Composition"
+    compliance_label: true
+    objective: "Ensure proper Flutter development practices and effective widget composition"
+    success_criteria: "StatelessWidget preferred over StatefulWidget when possible; proper widget key usage; effective use of const constructors; appropriate widget composition and separation of concerns"
+    failure_criteria: "Unnecessary StatefulWidget usage, missing const constructors for performance, poor widget composition leading to deep nesting, or missing widget keys where needed for performance"
+
+  - title: "Asynchronous Programming and Stream Handling"
+    compliance_label: false
+    objective: "Ensure proper handling of asynchronous operations and stream management in Flutter"
+    success_criteria: "Async/await used appropriately with proper error handling; StreamBuilder and FutureBuilder used correctly; stream subscriptions properly managed and disposed; proper use of isolates for heavy computation"
+    failure_criteria: "Unhandled Future errors, memory leaks from unclosed stream subscriptions, blocking UI thread with heavy computation, or improper use of async widgets"

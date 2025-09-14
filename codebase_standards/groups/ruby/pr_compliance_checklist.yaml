@@ -1,0 +1,19 @@
+pr_compliances:
+
+  - title: "Idiomatic Ruby Patterns and Readability"
+    compliance_label: true
+    objective: "Ensure code follows Ruby idioms and prioritizes readability over cleverness"
+    success_criteria: "Uses Ruby idioms like each instead of for loops; blocks and iterators used appropriately; meaningful method and variable names; symbols used instead of strings for keys; proper use of Ruby's expressive syntax"
+    failure_criteria: "C-style for loops instead of iterators, overly clever one-liners that hurt readability, inappropriate use of metaprogramming, or violating Ruby naming conventions"
+
+  - title: "Exception Handling and Error Context"
+    compliance_label: false
+    objective: "Ensure exceptions are handled gracefully with proper context and recovery strategies"
+    success_criteria: "Specific exception classes caught instead of generic rescue; error messages include context about the operation; proper use of ensure blocks for cleanup; custom exceptions inherit from StandardError"
+    failure_criteria: "Bare rescue clauses catching all exceptions, generic error messages without context, missing ensure blocks for resource cleanup, or exceptions inheriting from Exception instead of StandardError"
+
+  - title: "Rails Security Standards"
+    compliance_label: false
+    objective: "Ensure Rails-specific security practices are followed to prevent common vulnerabilities"
+    success_criteria: "Strong parameters used for mass assignment protection; SQL injection prevention with parameterized queries; proper authentication and authorization checks; CSRF protection maintained; secure headers configured"
+    failure_criteria: "Missing strong parameters, raw SQL queries without parameterization, missing authorization checks, disabled CSRF protection, or exposure of sensitive data in logs"

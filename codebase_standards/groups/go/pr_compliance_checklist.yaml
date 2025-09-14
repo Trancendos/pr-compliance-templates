@@ -1,0 +1,19 @@
+pr_compliances:
+
+  - title: "Idiomatic Error Handling"
+    compliance_label: false
+    objective: "Ensure errors are handled according to Go conventions and provide meaningful context"
+    success_criteria: "Errors are checked immediately after function calls; wrapped errors provide context about the operation; custom error types are used where appropriate; errors are not ignored with blank identifier"
+    failure_criteria: "Unchecked errors, generic error messages without context, inappropriate use of panic(), or errors ignored without justification"
+
+  - title: "Goroutine Safety and Resource Management"
+    compliance_label: false
+    objective: "Ensure goroutines are properly managed and don't leak resources"
+    success_criteria: "Goroutines have clear termination conditions; context is used for cancellation; channels are properly closed; WaitGroups or sync primitives are used correctly; no goroutine leaks"
+    failure_criteria: "Infinite goroutines without termination, unclosed channels, missing context cancellation, or improper use of sync primitives leading to deadlocks"
+
+  - title: "Interface Design and Composition"
+    compliance_label: true
+    objective: "Ensure interfaces follow Go's composition principles and are properly designed"
+    success_criteria: "Interfaces are small and focused (preferably single method); composition is preferred over inheritance; interface names follow Go conventions (-er suffix); accept interfaces, return structs pattern is followed"
+    failure_criteria: "Large interfaces with many methods, inappropriate interface design, violation of Go's composition principles, or interfaces that are too broad for their use case"

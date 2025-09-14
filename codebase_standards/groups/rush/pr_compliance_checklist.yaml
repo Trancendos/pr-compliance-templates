@@ -1,0 +1,19 @@
+pr_compliances:
+
+  - title: "Package Dependencies and Version Management"
+    compliance_label: true
+    objective: "Ensure proper dependency management and version consistency across monorepo packages"
+    success_criteria: "Common versions defined in common/config/rush/common-versions.json; peer dependencies properly specified; no phantom dependencies; appropriate use of preferredVersions; proper dependency categorization"
+    failure_criteria: "Version inconsistencies across packages, missing peer dependency specifications, phantom dependencies used without declaration, or inappropriate dependency categorizations"
+
+  - title: "Build Performance and Incremental Builds"
+    compliance_label: false
+    objective: "Ensure efficient build processes and proper utilization of Rush's incremental build capabilities"
+    success_criteria: "Build cache properly configured; appropriate project dependencies declared; build scripts optimized for incremental builds; proper use of build phases; no unnecessary project rebuilds"
+    failure_criteria: "Missing or misconfigured build cache, incorrect project dependencies causing unnecessary rebuilds, inefficient build scripts, or poor build phase organization"
+
+  - title: "Monorepo Hygiene and Project Structure"
+    compliance_label: false
+    objective: "Ensure clean monorepo structure and adherence to Rush project organization principles"
+    success_criteria: "Projects properly categorized in rush.json; consistent naming conventions across packages; appropriate project tags usage; proper workspace organization; no circular dependencies between projects"
+    failure_criteria: "Inconsistent project organization, missing or inappropriate project tags, poor naming conventions, workspace pollution, or circular dependencies that violate monorepo principles"

@@ -1,0 +1,19 @@
+pr_compliances:
+
+  - title: "Proper Type Definitions and Avoiding 'any'"
+    compliance_label: true
+    objective: "Ensure strong typing throughout the codebase and minimize use of 'any' type"
+    success_criteria: "All function parameters and return types are explicitly defined; interfaces and types are used instead of 'any'; generic types are properly constrained; union types are used appropriately"
+    failure_criteria: "Excessive use of 'any' type, missing type annotations on functions, poorly defined interfaces, or unconstrained generics that defeat TypeScript's benefits"
+
+  - title: "Null Safety and Optional Chaining"
+    compliance_label: false
+    objective: "Ensure proper handling of null/undefined values and use modern null safety features"
+    success_criteria: "Optional chaining (?.) and nullish coalescing (??) are used appropriately; strict null checks are respected; proper type guards for null/undefined checks"
+    failure_criteria: "Unsafe property access without null checks, inappropriate use of non-null assertion (!), or missing null/undefined handling in critical paths"
+
+  - title: "Interface Design and Code Reusability"
+    compliance_label: true
+    objective: "Ensure interfaces are well-designed, cohesive, and promote code reusability"
+    success_criteria: "Interfaces have clear single responsibilities; proper use of extends and composition; generic interfaces where appropriate; discriminated unions for complex types"
+    failure_criteria: "Overly broad interfaces with unrelated properties, missing generic constraints, poor separation of concerns, or interfaces that violate the Interface Segregation Principle"

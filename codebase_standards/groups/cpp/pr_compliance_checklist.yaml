@@ -1,0 +1,19 @@
+pr_compliances:
+
+  - title: "RAII and Resource Management"
+    compliance_label: false
+    objective: "Ensure proper resource acquisition and cleanup using RAII principles"
+    success_criteria: "Resources are acquired in constructors and released in destructors; smart pointers (unique_ptr, shared_ptr) are used instead of raw pointers for ownership; no memory leaks or dangling pointers; proper exception safety"
+    failure_criteria: "Manual memory management with new/delete, raw pointer ownership without clear lifetime management, resource leaks, or missing exception safety guarantees"
+
+  - title: "Modern C++ Features and Standards Compliance"
+    compliance_label: true
+    objective: "Ensure code uses modern C++ features appropriately and follows current language standards"
+    success_criteria: "Auto keyword used appropriately; range-based for loops where applicable; move semantics implemented correctly; const correctness maintained; override/final keywords used; nullptr instead of NULL"
+    failure_criteria: "Use of deprecated features, missing const correctness, inappropriate use of C-style casts, manual implementation where STL alternatives exist, or ignoring move semantics opportunities"
+
+  - title: "Exception Safety and Error Handling"
+    compliance_label: false
+    objective: "Ensure proper exception handling and maintain strong exception safety guarantees"
+    success_criteria: "Functions provide strong or basic exception safety guarantees; RAII used for cleanup; exceptions are caught by const reference; proper use of noexcept specifier; no resource leaks during exception unwinding"
+    failure_criteria: "Poor exception safety, catching exceptions by value, missing noexcept specifications where appropriate, or code that leaves objects in invalid states after exceptions"

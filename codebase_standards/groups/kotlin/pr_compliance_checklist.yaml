@@ -1,0 +1,19 @@
+pr_compliances:
+
+  - title: "Null Safety and Smart Casts"
+    compliance_label: false
+    objective: "Ensure proper use of Kotlin's null safety features and avoid null pointer exceptions"
+    success_criteria: "Nullable types (?) used appropriately; safe calls (?.) and Elvis operator (?:) used instead of unsafe casts; smart casts leveraged effectively; proper null checks before unsafe operations"
+    failure_criteria: "Unsafe casts (!!) used excessively without justification, missing null safety considerations, or ignoring Kotlin's null safety features"
+
+  - title: "Coroutines and Async Programming"
+    compliance_label: false
+    objective: "Ensure proper use of Kotlin coroutines and structured concurrency principles"
+    success_criteria: "Coroutines use appropriate dispatchers; structured concurrency with proper scope management; cancellation is handled correctly; no blocking calls in coroutine contexts"
+    failure_criteria: "Inappropriate use of GlobalScope, missing cancellation handling, blocking calls within coroutines, or coroutine leaks due to improper scope management"
+
+  - title: "Idiomatic Kotlin and Android Development Standards"
+    compliance_label: true
+    objective: "Ensure code follows Kotlin idioms and Android development standards"
+    success_criteria: "Data classes used for simple data containers; extension functions used appropriately; proper use of sealed classes and when expressions; Android lifecycle awareness in components"
+    failure_criteria: "Verbose Java-style code instead of Kotlin idioms, missing data class benefits, inappropriate use of inheritance over composition, or ignoring Android lifecycle in UI components"

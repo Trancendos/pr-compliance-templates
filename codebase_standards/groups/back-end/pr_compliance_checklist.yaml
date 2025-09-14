@@ -1,0 +1,19 @@
+pr_compliances:
+
+  - title: "API Security and Input Validation"
+    compliance_label: false
+    objective: "Ensure robust API security measures and comprehensive input validation"
+    success_criteria: "All inputs validated and sanitized; proper authentication and authorization; rate limiting implemented; SQL injection prevention; secure error handling without information disclosure; CORS configured appropriately"
+    failure_criteria: "Missing input validation, weak authentication/authorization, no rate limiting, SQL injection vulnerabilities, verbose error messages exposing system details, or misconfigured CORS policies"
+
+  - title: "Scalability and Performance Considerations"
+    compliance_label: true
+    objective: "Ensure backend services are designed for scalability and optimal performance"
+    success_criteria: "Database queries optimized with proper indexing; caching strategies implemented; connection pooling used; async operations for I/O-bound tasks; proper pagination for large datasets; monitoring and logging in place"
+    failure_criteria: "N+1 query problems, missing database indexes, no caching for expensive operations, blocking I/O operations, missing pagination for large results, or inadequate monitoring/logging"
+
+  - title: "Data Consistency and Transaction Management"
+    compliance_label: false
+    objective: "Ensure proper data consistency and transaction handling in concurrent environments"
+    success_criteria: "ACID properties maintained for critical operations; proper transaction boundaries; deadlock prevention strategies; eventual consistency handled appropriately; data validation at multiple layers; proper isolation levels"
+    failure_criteria: "Missing transaction boundaries for critical operations, potential race conditions, inadequate handling of concurrent data access, missing data validation, or inappropriate isolation levels causing performance or consistency issues"

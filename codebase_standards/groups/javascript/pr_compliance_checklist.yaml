@@ -1,0 +1,19 @@
+pr_compliances:
+
+  - title: "Proper Async/Await Error Handling"
+    compliance_label: false
+    objective: "Ensure async operations are properly wrapped in try-catch blocks and don't silently fail"
+    success_criteria: "All async/await calls are wrapped in try-catch blocks with meaningful error handling; Promise rejections are caught and handled appropriately"
+    failure_criteria: "Unhandled async operations, missing try-catch around await calls, or Promise rejections that could cause unhandled rejection warnings"
+
+  - title: "Meaningful Function and Variable Names"
+    compliance_label: true
+    objective: "Ensure identifiers clearly express their purpose and follow JavaScript naming conventions"
+    success_criteria: "Functions use camelCase and describe what they do (not just generic names); variables clearly indicate their content; boolean variables use is/has/can prefixes; constants use UPPER_CASE"
+    failure_criteria: "Generic names like 'handleData()', 'doStuff()', single letter variables outside of loops, misleading names that don't match behavior"
+
+  - title: "Avoiding Memory Leaks and Proper Cleanup"
+    compliance_label: false
+    objective: "Ensure proper cleanup of event listeners, timers, and subscriptions to prevent memory leaks"
+    success_criteria: "Event listeners are removed when components unmount; timers and intervals are cleared; subscriptions are unsubscribed; DOM references are nullified when appropriate"
+    failure_criteria: "Missing cleanup of event listeners, uncleaned timers/intervals, persistent subscriptions, or retained DOM references after component lifecycle ends"

@@ -1,0 +1,19 @@
+pr_compliances:
+
+  - title: "Optional Handling and Nil Safety"
+    compliance_label: false
+    objective: "Ensure proper handling of optionals and prevention of nil-related crashes"
+    success_criteria: "Optional binding (if let, guard let) used appropriately; force unwrapping (!) avoided or justified with comments; nil coalescing operator (??) used when appropriate; optional chaining (?.) used for safe access"
+    failure_criteria: "Excessive force unwrapping without justification, missing optional binding where needed, or unsafe optional handling that could lead to runtime crashes"
+
+  - title: "Memory Management and Retain Cycles"
+    compliance_label: false
+    objective: "Ensure proper memory management and prevention of retain cycles in ARC environment"
+    success_criteria: "Weak and unowned references used appropriately in closures and delegates; capture lists specified in closures when needed; proper use of weak/strong dance pattern; no retain cycles in object relationships"
+    failure_criteria: "Missing weak references in delegate patterns, retain cycles in closures, inappropriate use of unowned references, or memory leaks due to strong reference cycles"
+
+  - title: "iOS Development Standards and UI Consistency"
+    compliance_label: true
+    objective: "Ensure adherence to iOS/SwiftUI standards and consistent user experience"
+    success_criteria: "Proper use of auto layout constraints; accessibility labels and traits provided; appropriate use of view controllers and SwiftUI views; following iOS Human Interface Guidelines"
+    failure_criteria: "Hardcoded frame sizes instead of auto layout, missing accessibility support, inappropriate view controller usage, or UI patterns that violate iOS conventions"

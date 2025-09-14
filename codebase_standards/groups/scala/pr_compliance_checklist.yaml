@@ -1,0 +1,19 @@
+pr_compliances:
+
+  - title: "Functional Programming Patterns and Immutability"
+    compliance_label: true
+    objective: "Ensure proper use of functional programming principles and immutable data structures"
+    success_criteria: "Immutable collections used by default; pure functions without side effects; proper use of Option, Either, and Try for error handling; function composition and higher-order functions used appropriately"
+    failure_criteria: "Excessive use of mutable state, functions with hidden side effects, avoiding functional constructs in favor of imperative patterns, or missing null safety with Option"
+
+  - title: "Type Safety and Pattern Matching"
+    compliance_label: false
+    objective: "Ensure strong type safety and effective use of Scala's pattern matching capabilities"
+    success_criteria: "Case classes used for data modeling; sealed traits for ADTs; comprehensive pattern matching with proper exhaustiveness; type parameters and bounds used effectively"
+    failure_criteria: "Missing case class benefits, non-exhaustive pattern matching, poor use of type system, or avoiding sealed traits where appropriate for type safety"
+
+  - title: "Concurrency and Future Handling"
+    compliance_label: false
+    objective: "Ensure proper handling of concurrent operations and Future compositions"
+    success_criteria: "Futures composed using flatMap and map instead of blocking; proper ExecutionContext usage; error handling with recover and recoverWith; avoiding callback hell with proper composition"
+    failure_criteria: "Blocking on Futures with Await.result, missing error handling in Future chains, inappropriate ExecutionContext usage, or nested callbacks instead of composition"

@@ -1,0 +1,19 @@
+pr_compliances:
+
+  - title: "Security Standards and Input Validation"
+    compliance_label: false
+    objective: "Ensure proper security measures are in place to prevent common PHP vulnerabilities"
+    success_criteria: "All user input is properly sanitized and validated; prepared statements used for database queries; output properly escaped for context (HTML, URL, etc.); secure session handling; CSRF protection implemented"
+    failure_criteria: "Unsanitized user input, string concatenation in SQL queries, missing output escaping, insecure session configuration, or missing CSRF protection"
+
+  - title: "Modern PHP Features and Type Safety"
+    compliance_label: true
+    objective: "Ensure code uses modern PHP features and maintains type safety where possible"
+    success_criteria: "Type declarations used for function parameters and return types; null coalescing operator (??) used appropriately; proper use of namespaces and autoloading; modern array syntax [] instead of array()"
+    failure_criteria: "Missing type declarations, inconsistent use of modern syntax, poor namespace organization, or avoiding strict types where beneficial"
+
+  - title: "Error Handling and Logging Practices"
+    compliance_label: false
+    objective: "Ensure proper error handling and logging without exposing sensitive information"
+    success_criteria: "Exceptions provide meaningful context; error logs contain sufficient debugging information; sensitive data not logged or exposed; proper use of try-catch blocks; graceful degradation on errors"
+    failure_criteria: "Generic error messages, sensitive data in logs or error messages, missing exception handling, or errors that crash the application without proper handling"

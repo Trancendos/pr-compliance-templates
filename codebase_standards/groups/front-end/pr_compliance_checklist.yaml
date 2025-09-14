@@ -1,0 +1,19 @@
+pr_compliances:
+
+  - title: "Accessibility and Inclusive Design"
+    compliance_label: false
+    objective: "Ensure web applications are accessible to users with disabilities and follow WCAG guidelines"
+    success_criteria: "Semantic HTML elements used appropriately; proper ARIA labels and roles; keyboard navigation support; sufficient color contrast ratios; alt text for images; screen reader compatibility"
+    failure_criteria: "Generic div/span elements instead of semantic HTML, missing ARIA labels, keyboard-inaccessible elements, poor color contrast, missing alt text, or components that break screen reader functionality"
+
+  - title: "Performance Optimization and User Experience"
+    compliance_label: true
+    objective: "Ensure optimal loading performance and smooth user experience across devices"
+    success_criteria: "Images properly optimized and lazy-loaded; critical CSS inlined; JavaScript code-split appropriately; minimal render-blocking resources; responsive design for mobile devices; smooth animations and transitions"
+    failure_criteria: "Unoptimized large images, blocking CSS/JS resources, missing code splitting, poor mobile responsiveness, janky animations, or unnecessary re-renders causing performance issues"
+
+  - title: "Security and Data Protection"
+    compliance_label: false
+    objective: "Ensure client-side security standards and proper handling of sensitive data"
+    success_criteria: "Content Security Policy (CSP) headers configured; XSS prevention measures in place; sensitive data not stored in localStorage/sessionStorage; proper input sanitization; secure cookie handling"
+    failure_criteria: "Missing CSP headers, XSS vulnerabilities through innerHTML usage, sensitive data exposed in client storage, unsanitized user input, or insecure cookie configurations"

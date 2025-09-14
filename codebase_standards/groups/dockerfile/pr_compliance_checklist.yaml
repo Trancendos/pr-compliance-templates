@@ -1,0 +1,19 @@
+pr_compliances:
+
+  - title: "Security Standards and Minimal Attack Surface"
+    compliance_label: false
+    objective: "Ensure Docker images follow security standards and minimize attack surface"
+    success_criteria: "Non-root user specified for running applications; minimal base images used (alpine, scratch, distroless); no secrets or sensitive data in image layers; proper use of .dockerignore; security updates applied"
+    failure_criteria: "Running containers as root user, using bloated base images, secrets embedded in Dockerfile, missing .dockerignore file, or outdated base images with known vulnerabilities"
+
+  - title: "Image Optimization and Build Efficiency"
+    compliance_label: true
+    objective: "Ensure efficient Docker image builds with optimal layer caching and minimal size"
+    success_criteria: "Multi-stage builds used when appropriate; layers ordered for optimal caching; minimal number of RUN instructions; build dependencies separated from runtime dependencies; appropriate use of COPY vs ADD"
+    failure_criteria: "Single-stage builds when multi-stage would benefit; poor layer ordering breaking cache; excessive RUN instructions; mixing build and runtime dependencies; inappropriate use of ADD instead of COPY"
+
+  - title: "Proper Resource Management and Health Checks"
+    compliance_label: false
+    objective: "Ensure containers have proper resource constraints and health monitoring"
+    success_criteria: "HEALTHCHECK instruction defined for services; appropriate EXPOSE instructions for ports; proper signal handling with STOPSIGNAL; resource-aware application configuration; graceful shutdown handling"
+    failure_criteria: "Missing health checks for long-running services, undefined or incorrect port exposure, poor signal handling leading to ungraceful shutdowns, or applications not aware of containerized resource constraints"

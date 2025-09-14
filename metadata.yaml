@@ -1,28 +1,29 @@
-# Standalone repos
-repo_a:
-  pr_compliance_checklist_paths:
-    - "repo_a"
+# This file defines repository metadata for PR compliance checklist mapping.
+# This is an example configuration that should be customized for your organization's repositories.
+# Place this file in your pr-agent-settings repository for hierarchical compliance management.
 
-# Group-associated repos
-repo_b:
+
+# Backend Python service
+user-service:
   pr_compliance_checklist_paths:
-    - "groups/backend_repos"
     - "groups/python"
+    - "groups/backend_repos"
 
-# Multi-group repos
-repo_c:
+# Frontend React application
+dashboard-ui:
   pr_compliance_checklist_paths:
-    - "groups/frontend_repos"
     - "groups/javascript"
+    - "groups/front-end"
 
-# Monorepo with subprojects
-monorepo-name:
+# Monorepo with multiple services
+platform-monorepo:
   pr_compliance_checklist_paths:
-    - "monorepo-name"
+    - "platform-monorepo"
   monorepo_subprojects:
-    service-a:
+    api-service:
       pr_compliance_checklist_paths:
-        - "monorepo-name/service-a"
-    service-b:
+        - "groups/python"
+    web-client:
       pr_compliance_checklist_paths:
-        - "monorepo-name/service-b"
+        - "groups/typescript"
+        - "groups/front-end"
